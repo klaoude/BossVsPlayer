@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2.2) # CMake version check
 
-project(HackSlash) # Create project "HackSlash"
+project(BossVsPlayer) # Create project "HackSlash"
 
 #Flags
 SET(GCC_LINK_FLAGS "-std=c++14 -lSDL2 -lSDL2_image -lSDL2_ttf -lGL -lGLU -lz -lGLEW -lglut  -lm -lsfml-system -lsfml-network -lpthread")
@@ -12,7 +12,7 @@ include_directories("${CMAKE_SOURCE_DIR}/include")
 
 file(GLOB sources *.h *.c *.cxx *.cpp *.hxx)
 
-add_executable(HackSlash ${sources})
+add_executable(BossVsPlayer ${sources})
 
 TARGET_LINK_LIBRARIES(HackSlash ${CMAKE_SOURCE_DIR}/lib/libKlaoudeEngineLinux.a ${CMAKE_SOURCE_DIR}/lib/libsimpleJSON.a)
 
