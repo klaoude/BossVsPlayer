@@ -14,4 +14,4 @@ file(GLOB sources *.h *.c *.cxx *.cpp *.hxx)
 
 add_executable(BossVsPlayer ${sources})
 
-TARGET_LINK_LIBRARIES(BossVsPlayer ${CMAKE_SOURCE_DIR}/lib/libKlaoudeEngineLinux.a ${CMAKE_SOURCE_DIR}/lib/libsimpleJSON.a)
+TARGET_LINK_LIBRARIES(BossVsPlayer ${CMAKE_SOURCE_DIR}/lib/libKlaoudeEngineLinux.a)

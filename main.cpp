@@ -1,17 +1,8 @@
-#include <KlaoudeEngine.h>
-#include <Window.h>
+#include "MainGame.h"
 
-int main(int argc, char* argv[])
-{
-  KlaoudeEngine::init();
+int main(int argc, char** argv) {
 
-  KlaoudeEngine::Window window;
-  window.create("Name", 800, 600, 0);
-
-  while (1)
-  {
-    window.swapBuffer();
-  }
-
+  MainGame mainGame;
+  mainGame.run(true);
   return 0;
 }
