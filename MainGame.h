@@ -8,6 +8,8 @@
 #include <SpriteBatch.h>
 #include <Timing.h>
 
+#include "Player.h"
+
 enum class GameStates {PLAY, EXIT};
 
 class MainGame {
@@ -30,6 +32,8 @@ private:
   KlaoudeEngine::InputManager m_inputManager;
   KlaoudeEngine::Camera2D m_camera;
   KlaoudeEngine::SpriteBatch m_agentSpriteBatch;
+
+  Player m_player;
 
   int m_screenWidht, m_screenHeight;
   float m_fps;

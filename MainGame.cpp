@@ -24,6 +24,8 @@ void MainGame::initSystems()
   m_agentSpriteBatch.init();
 
   m_camera.init(m_screenWidht, m_screenHeight);
+
+  m_player.init(glm::vec2(100, 100), glm::vec2(0, 0), 3.f, &m_inputManager);
 }
 
 void MainGame::initShaders()
@@ -70,7 +72,7 @@ void MainGame::gameLoop()
     {
       float deltaTime = std::min(totalDeltaTime, MAX_DELTA_TIME);
 
-
+      m_player.update(deltaTime);
 
       totalDeltaTime -= deltaTime;
       i++;
@@ -131,6 +133,7 @@ void MainGame::drawGame()
 
   m_agentSpriteBatch.begin();
 
+  m_player.draw(m_agentSpriteBatch);
 
   m_agentSpriteBatch.end();
   m_agentSpriteBatch.renderBatch();
